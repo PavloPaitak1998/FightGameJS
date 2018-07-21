@@ -1,6 +1,6 @@
-import { Fighter } from "./fighter";
-import { ImprovedFighter } from "./improvedFighter";
-import { fight } from "./fight";
+import { Fighter } from "./fighter.js";
+import { ImprovedFighter } from "./improvedFighter.js";
+import { fight } from "./fight.js";
 
 // create two instances
 var fighter = new Fighter("Fighter", 100, 3);

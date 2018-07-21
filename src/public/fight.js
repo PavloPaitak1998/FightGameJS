@@ -19,7 +19,7 @@ export async function fight(fighter, improvedFighter, ...points) {
     console.log("K.O.");
     let promise = improvedFighter.knockout();
     await promise.then(result => {
-      console.log("The winner is" + fighter.name + "!");
+      console.log("The winner is" + fighter.name + " !");
     });
   } else {
     console.log("A draw !");

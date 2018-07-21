@@ -1,43 +1,43 @@
 // Create class Fighter
 export class Fighter {
-    constructor(_name, _health, _power) {
-      this.name = _name;
-      this.health = _health;
-      this.power = _power;
-    }
-  
-    get health() {
-      return this.health;
-    }
-    set health(value) {
-      this.health = value;
-    }
-  
-    get name() {
-      return this.name;
-    }
-  
-    get power() {
-      return this.power;
-    }
-  
-    setDamage(damage) {
-      this.health = this.health - damage;
-      console.log(this.name, " Health: ", this.health);
-    }
-  
-    hit(enemy, point) {
-      let damage = 0;
-      damage = point * this.power;
-      enemy.setDamage(damage);
-    }
-  
-    knockout() {
-      return new Promise((resolve, reject) => {
-        console.log("Time is over !");
-        setTimeout(() => {
-          resolve("Resolved !");
-        }, 500);
-      });
-    }
+  constructor(name, health, power) {
+    this._name = name;
+    this._health = health;
+    this._power = power;
   }
+
+  get health() {
+    return this._health;
+  }
+  set health(value) {
+    this._health = value;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get power() {
+    return this._power;
+  }
+
+  setDamage(damage) {
+    this.health = this.health - damage;
+    console.log(this.name, " Health: ", this.health);
+  }
+
+  hit(enemy, point) {
+    let damage = 0;
+    damage = point * this.power;
+    enemy.setDamage(damage);
+  }
+
+  knockout() {
+    return new Promise((resolve, reject) => {
+      console.log("Time is over !");
+      setTimeout(() => {
+        resolve("Resolved !");
+      }, 500);
+    });
+  }
+}

@@ -3,8 +3,8 @@ import { Fighter } from "./fighter.js";
 
 // Create class ImprovedFighter
 export class ImprovedFighter extends Fighter {
-  constructor(_name, _health, _power) {
-    super(_name, _health, _power);
+  constructor(name, health, power) {
+    super(name, health, power);
   }
 
   doubleHit(enemy, point) {
